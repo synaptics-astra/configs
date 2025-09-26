@@ -6,7 +6,7 @@
 #
 # Give a Description for VSSDK Configuration
 #
-CONFIG_DESCRIPTION="SL1620 A0 Yocto Poky Kirkstone for RDK (aarch64 userspace)"
+CONFIG_DESCRIPTION="SL1620 A0 Yocto Poky for RDK (aarch64 userspace)"
 CONFIG_PRODUCT_NAME="sl1620_poky_aarch64_rdk"
 CONFIG_BOARD_NAME="SL1620 A0 RDK"
 CONFIG_PRODUCT_IP_LIST="noip"

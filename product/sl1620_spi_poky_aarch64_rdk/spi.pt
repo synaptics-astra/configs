@@ -1,0 +1,13 @@
+#Partition table
+#PlaneNum=2 for dual_plane, planNum=3 for eslc
+#Size   Name               PlaneNum  Partition_type	FileSystem  write_protection
+512K    preboot_a          1         slc                raw           normal
+576K    tzk_a              1         slc                raw           normal
+896K    bl_a               1         slc                raw           normal
+64K     @env               1         slc                raw           normal
+512K    preboot_b          1         slc                raw           normal
+576K    tzk_b              1         slc                raw           normal
+896K    bl_b               1         slc                raw           normal
+64K     @misc              1         slc                raw           normal
+14M     boot_a             1         slc                raw           normal
+14M     boot_b             1         slc                raw           normal
