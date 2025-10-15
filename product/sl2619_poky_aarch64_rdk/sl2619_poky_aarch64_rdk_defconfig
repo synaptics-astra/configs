@@ -82,7 +82,7 @@ CONFIG_SYNA_SDK_OUT_ROOTFS="system"
 # Toolchain Configuration
 #
 CONFIG_TOOLCHAIN=y
-CONFIG_TOOLCHAIN_PATH="$(TOPDIR)/toolchain/aarch64/gcc-arm-aarch64-linux-gnu-8.3/bin:$(TOPDIR)/toolchain/aarch32/gcc-linaro-arm-eabi-6.2.1/bin:$(TOPDIR)/toolchain/aarch32/gcc-arm-linux-gnueabi-8.3/bin:$(TOPDIR)/toolchain/oe/linux-x64/gcc-11.3.0-poky/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-pokymllib32-linux"
+CONFIG_TOOLCHAIN_PATH="$(TOPDIR)/toolchain/aarch64/gcc-arm-aarch64-linux-gnu-8.3/bin:$(TOPDIR)/toolchain/aarch32/gcc-linaro-arm-eabi-6.2.1/bin:$(TOPDIR)/toolchain/aarch32/gcc-arm-linux-gnueabi-8.3/bin:$(TOPDIR)/toolchain/oe/linux-x64/gcc-11.3.0-poky/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-pokymllib32-linux:$(TOPDIR)/toolchain/aarch64/arm-gnu-toolchain-13.2/bin:"
 CONFIG_TOOLCHAIN_TA="arm-eabi-"
 CONFIG_TOOLCHAIN_BSP="aarch64-linux-gnu-"
 CONFIG_TOOLCHAIN_APPLICATION="aarch64-pokymllib32-linux-"
@@ -111,7 +111,7 @@ CONFIG_COMPRESS_LZ4=y
 CONFIG_LINUX_SRC_PATH="linux_6_12/main"
 CONFIG_LINUX_ARCH="arm64"
 CONFIG_LINUX_DEFCONFIG="sl261x_defconfig"
-CONFIG_LINUX_DTS="synaptics/sl261x-fpga"
+CONFIG_LINUX_DTS="synaptics/sl261x-rdk"
 CONFIG_LINUX_REL_PATH="linux"
 # CONFIG_LINUX_KASAN_ENABLE is not set
 # CONFIG_LINUX_DEBUG_EXTRA is not set
@@ -121,7 +121,7 @@ CONFIG_LINUX_REL_PATH="linux"
 #
 # Boot
 #
-CONFIG_PREBOOT_PLATFORM="klamath"
+CONFIG_PREBOOT_PLATFORM="klamath_rdk"
 CONFIG_GENX_ENABLE=y
 CONFIG_GENX_MCU=y
 
@@ -162,7 +162,7 @@ CONFIG_UBOOT=y
 CONFIG_UBOOT_SRC_PATH="u-boot"
 CONFIG_UBOOT_ARCH="arm"
 CONFIG_UBOOT_DEFCONFIG="klamath_suboot_defconfig"
-CONFIG_UBOOT_DTS="klamath-fpga"
+CONFIG_UBOOT_DTS="klamath-rdk"
 CONFIG_UBOOT_REL_PATH="release/uboot"
 # CONFIG_STD_ANDROID_IMAGE is not set
 # end of Boot
@@ -175,7 +175,7 @@ CONFIG_UBOOT_REL_PATH="release/uboot"
 # TEE
 #
 CONFIG_TEE=y
-CONFIG_TZK_MEM_LAYOUT="stb_2g_cma_poky"
+CONFIG_TZK_MEM_LAYOUT="stb_4g_cma_poky"
 CONFIG_TZK_SUPPORTED_MEM_LAYOUT="stb_2g_cma stb_4g_cma"
 CONFIG_TZK_MZONE_ENABLE=y
 CONFIG_TZK_REGFW_ENABLE=y
