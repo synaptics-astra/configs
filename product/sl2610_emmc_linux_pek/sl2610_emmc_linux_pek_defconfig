@@ -83,7 +83,7 @@ CONFIG_SYNA_SDK_OUT_ROOTFS="system"
 #
 CONFIG_TOOLCHAIN=y
 CONFIG_TOOLCHAIN_PATH="$(TOPDIR)/build/tools/lib/ccache:$(TOPDIR)/toolchain/aarch64/gcc-arm-aarch64-linux-gnu-8.3/bin:$(TOPDIR)/toolchain/aarch32/gcc-linaro-arm-eabi-6.2.1/bin:$(TOPDIR)/toolchain/aarch32/gcc-arm-linux-gnueabi-8.3/bin:"
-CONFIG_TOOLCHAIN_TA="arm-eabi-"
+CONFIG_TOOLCHAIN_TA="aarch64-linux-gnu-"
 CONFIG_TOOLCHAIN_BSP="aarch64-linux-gnu-"
 CONFIG_TOOLCHAIN_APPLICATION="arm-linux-gnueabihf-"
 CONFIG_TOOLCHAIN_APPLICATION_PATH="aarch32/gcc-arm-linux-gnueabi-8.3"

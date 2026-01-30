@@ -81,7 +81,7 @@ CONFIG_SYNA_SDK_OUT_ROOTFS="system"
 #
 CONFIG_TOOLCHAIN=y
 CONFIG_TOOLCHAIN_PATH="$(TOPDIR)/toolchain/oe/linux-x64/gcc-13.3.0-poky/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux"
-CONFIG_TOOLCHAIN_TA="arm-eabi-"
+CONFIG_TOOLCHAIN_TA="aarch64-linux-gnu-"
 CONFIG_TOOLCHAIN_BSP="aarch64-poky-linux-"
 CONFIG_TOOLCHAIN_APPLICATION="aarch64-poky-linux-"
 CONFIG_TOOLCHAIN_APPLICATION_PATH=""
@@ -138,6 +138,10 @@ CONFIG_PREBOOT_SECURITY_IMAGE_PATH="boot/security/images"
 # Preboot Configuration
 #
 # CONFIG_PREBOOT_MEMORY_MULTIPLE is not set
+CONFIG_PMIC_MODE_I2C=y
+# CONFIG_PMIC_MODE_PWM is not set
+CONFIG_VCORE_PMIC_MODEL=""
+CONFIG_VCPU_PMIC_MODEL="tps62868"
 # end of Preboot Configuration
 
 # CONFIG_BOOTLOADER is not set
@@ -321,7 +325,7 @@ CONFIG_DRM_COMMON_TA=y
 CONFIG_GENCRYPTO=y
 # CONFIG_TA_PVR is not set
 CONFIG_TA_FACTORY=y
-CONFIG_NETFLIX_MGK=y
+# CONFIG_NETFLIX_MGK is not set
 # CONFIG_TA_IMAGEPROC is not set
 # end of TA_APP Configuration
 # end of Target Packages

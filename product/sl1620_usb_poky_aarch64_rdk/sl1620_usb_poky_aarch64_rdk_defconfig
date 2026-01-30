@@ -81,7 +81,7 @@ CONFIG_SYNA_SDK_OUT_ROOTFS="system"
 #
 CONFIG_TOOLCHAIN=y
 CONFIG_TOOLCHAIN_PATH="$(TOPDIR)/build/tools/lib/ccache:$(TOPDIR)/toolchain/aarch64/gcc-arm-aarch64-linux-gnu-8.3/bin:$(TOPDIR)/toolchain/aarch32/gcc-linaro-arm-eabi-6.2.1/bin:$(TOPDIR)/toolchain/aarch32/gcc-arm-linux-gnueabi-8.3/bin:$(TOPDIR)/toolchain/oe/linux-x64/gcc-11.3.0-poky/sysroots/x86_64-pokysdk-linux/usr/bin/arm-pokymllib32-linux-gnueabi"
-CONFIG_TOOLCHAIN_TA="arm-eabi-"
+CONFIG_TOOLCHAIN_TA="aarch64-linux-gnu-"
 CONFIG_TOOLCHAIN_BSP="aarch64-linux-gnu-"
 CONFIG_TOOLCHAIN_APPLICATION="aarch64-pokymllib32-linux-"
 CONFIG_TOOLCHAIN_APPLICATION_PATH=""
@@ -321,7 +321,7 @@ CONFIG_DRM_COMMON_TA=y
 CONFIG_GENCRYPTO=y
 # CONFIG_TA_PVR is not set
 CONFIG_TA_FACTORY=y
-CONFIG_NETFLIX_MGK=y
+# CONFIG_NETFLIX_MGK is not set
 # CONFIG_TA_IMAGEPROC is not set
 # end of TA_APP Configuration
 # end of Target Packages
