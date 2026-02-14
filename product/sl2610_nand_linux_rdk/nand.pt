@@ -1,0 +1,8 @@
+#Partition table, works for block_size >= 128kB, chip_size >= 256MB
+#PlaneNum=2 for dual_plane, planNum=3 for eslc
+#Size   Name               PlaneNum  Partition_type	FileSystem  write_protection
+1B      block0             1         slc                raw           all
+32B     pre-bootloader     1         slc                raw           normal
+16M     cmboot_a           1         slc                raw           normal
+16M     cmboot_b           1         slc                raw           normal
+214M    rootfs_a           1         slc                ubifs         none
