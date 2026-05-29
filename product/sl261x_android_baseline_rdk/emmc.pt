@@ -34,6 +34,4 @@
 4M              devinfo                 erase           default         none
 64M             metadata                erase           default         none
 8M              frp                     erase           default         none
-32M             firmware_a              default         default         none
-32M             firmware_b              default         default         none
 -               userdata                erase           default         none

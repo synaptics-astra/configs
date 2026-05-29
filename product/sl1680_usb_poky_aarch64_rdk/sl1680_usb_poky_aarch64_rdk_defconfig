@@ -196,7 +196,7 @@ CONFIG_UBOOT_REL_PATH="release/uboot"
 # TEE
 #
 CONFIG_TEE=y
-CONFIG_TZK_MEM_LAYOUT="stb_4g_cma_iommu_poky"
+CONFIG_TZK_MEM_LAYOUT="stb_2g_cma_iommu_poky"
 CONFIG_TZK_SUPPORTED_MEM_LAYOUT="stb_2g_cma_iommu_poky stb_4g_cma_iommu_poky"
 CONFIG_TZK_MZONE_ENABLE=y
 CONFIG_TZK_REGFW_ENABLE=y
@@ -259,6 +259,7 @@ CONFIG_AMP_IOMMU=y
 # CONFIG_AMP_SYS_LOW_COST is not set
 # CONFIG_AMP_MIPI_ENABLE is not set
 CONFIG_AMP_MIPI_PANEL=""
+CONFIG_SMP_OFF=y
 # end of Amp System Settings
 
 CONFIG_ENABLE_DRM=y

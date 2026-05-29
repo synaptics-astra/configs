@@ -10,8 +10,6 @@
 14M             bl_b                    default         default         none
 32M             boot_a                  default         default         none
 32M             boot_b                  default         default         none
-32M             firmware_a              default         default         none
-32M             firmware_b              default         default         none
 2560M           rootfs_a                default         default         none
 2560M           rootfs_b                default         default         none
 2M              devinfo                 erase           default         none
