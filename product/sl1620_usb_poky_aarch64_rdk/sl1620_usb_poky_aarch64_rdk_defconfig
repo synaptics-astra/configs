@@ -23,6 +23,7 @@ CONFIG_OPEN_TEE=y
 # CONFIG_BERLIN_PLATYPUS_A0 is not set
 # CONFIG_BERLIN_DOLPHIN_A0 is not set
 CONFIG_BERLIN_MYNA2_A0=y
+# CONFIG_BERLIN_KLAMATH is not set
 # CONFIG_DVF101 is not set
 # CONFIG_DVF99 is not set
 # CONFIG_DVF9918 is not set
@@ -48,6 +49,8 @@ CONFIG_RUNTIME_FILESYSTEMS="ramdisk(xz),system(ext4)"
 # CONFIG_IMAGE_EMMC is not set
 # CONFIG_IMAGE_NAND is not set
 CONFIG_IMAGE_USBBOOT=y
+# CONFIG_IMAGE_SPISUBOOT is not set
+# CONFIG_IMAGE_XSPI is not set
 # CONFIG_PREBOOT_BOOTFLOW_NR is not set
 CONFIG_PREBOOT_BOOTFLOW_AB=y
 
@@ -55,9 +58,6 @@ CONFIG_PREBOOT_BOOTFLOW_AB=y
 # Image Generation Configuration
 #
 CONFIG_IMAGE=y
-CONFIG_EMMC_PAGE_SIZE=512
-CONFIG_EMMC_BLOCK_SIZE=524288
-CONFIG_EMMC_TOTAL_SIZE=15552479232
 # end of Image Generation Configuration
 # end of Target Options
 
@@ -81,6 +81,7 @@ CONFIG_SYNA_SDK_OUT_ROOTFS="system"
 #
 CONFIG_TOOLCHAIN=y
 CONFIG_TOOLCHAIN_PATH="$(TOPDIR)/build/tools/lib/ccache:$(TOPDIR)/toolchain/aarch64/gcc-arm-aarch64-linux-gnu-8.3/bin:$(TOPDIR)/toolchain/aarch32/gcc-linaro-arm-eabi-6.2.1/bin:$(TOPDIR)/toolchain/aarch32/gcc-arm-linux-gnueabi-8.3/bin:$(TOPDIR)/toolchain/oe/linux-x64/gcc-11.3.0-poky/sysroots/x86_64-pokysdk-linux/usr/bin/arm-pokymllib32-linux-gnueabi"
+CONFIG_TOOLCHAIN_TEE="aarch64-linux-gnu-"
 CONFIG_TOOLCHAIN_TA="aarch64-linux-gnu-"
 CONFIG_TOOLCHAIN_BSP="aarch64-linux-gnu-"
 CONFIG_TOOLCHAIN_APPLICATION="aarch64-pokymllib32-linux-"
@@ -89,12 +90,16 @@ CONFIG_TOOLCHAIN_APPLICATION_CC="aarch64-pokymllib32-linux-gcc"
 CONFIG_LINUX_CROSS_COMPILE="aarch64-linux-gnu-"
 CONFIG_LINUX_CROSS_COMPILE_PATH="aarch64/gcc-arm-aarch64-linux-gnu-8.3"
 CONFIG_LINUX_CROSS_COMPILE_CC="aarch64-linux-gnu-gcc"
+CONFIG_LINUX_CROSS_COMPILE_ARGS=""
+CONFIG_RUST_PATH="rust/linux-x86/1.83.0"
 # end of Toolchain Configuration
 
 CONFIG_TOOLS=y
 CONFIG_TOOLS_REL_PATH="bin"
 CONFIG_TOOLS_BIN_PATH="build/tools/bin"
 CONFIG_SECURITY_TOOL_PATH="release/SECURITY/tools"
+# CONFIG_GENX_IMG_PY is not set
+# CONFIG_GENX_IMG_V3_PY is not set
 # end of Host Options
 
 #
@@ -121,6 +126,7 @@ CONFIG_LINUX_REL_PATH="linux"
 #
 CONFIG_PREBOOT_PLATFORM="sl1620_rdk"
 CONFIG_GENX_ENABLE=y
+# CONFIG_GENX_MCU is not set
 CONFIG_PREBOOT=y
 # CONFIG_EXTERNAL_PREBOOT is not set
 CONFIG_PREBOOT_MARKET_ID=1
@@ -138,6 +144,13 @@ CONFIG_PREBOOT_SECURITY_IMAGE_PATH="boot/security/images"
 # Preboot Configuration
 #
 # CONFIG_PREBOOT_MEMORY_MULTIPLE is not set
+# CONFIG_PREBOOT_ANDROID_BOOTCTRL is not set
+# CONFIG_PREBOOT_SKIP_FW is not set
+# CONFIG_PREBOOT_FORCE_SPI is not set
+# CONFIG_PMIC_IF_I2C is not set
+# CONFIG_PMIC_IF_PWM is not set
+# CONFIG_PMIC_IF_AUTO is not set
+CONFIG_PMIC_IF_LEGACY=y
 # end of Preboot Configuration
 
 # CONFIG_BOOTLOADER is not set
@@ -156,6 +169,7 @@ CONFIG_BL_FASTLOGO_RESID="13"
 
 CONFIG_UBOOT=y
 CONFIG_UBOOT_SRC_PATH="u-boot"
+# CONFIG_UBOOT_SPISUBOOT is not set
 CONFIG_UBOOT_ARCH="arm"
 CONFIG_UBOOT_DEFCONFIG="myna2_usb_suboot_defconfig"
 CONFIG_UBOOT_DTS="myna2-rdk-usb-suboot"
@@ -180,6 +194,10 @@ CONFIG_TEE_KERNEL_REL_PATH="tee/tzk"
 CONFIG_TEE_CLIENT_REL_PATH="tee/client"
 # CONFIG_TZK is not set
 CONFIG_OPTEE=y
+# CONFIG_ATF is not set
+# CONFIG_ATF_DEBUG is not set
+# CONFIG_OPTEE_OS is not set
+# CONFIG_OPTEE_DEBUG is not set
 # CONFIG_OPTEE_SAMPLE is not set
 # CONFIG_OPTEE_TEST is not set
 # end of TEE
@@ -277,6 +295,10 @@ CONFIG_DRIVERS=y
 # CONFIG_VOIPSDK_DVFXX is not set
 # CONFIG_GSTREAMER_PLUGINS_SYNA is not set
 # CONFIG_BOOTCTRL is not set
+# CONFIG_POWER is not set
+# CONFIG_SYNA_COMPOSITOR is not set
+# CONFIG_V4L2ISP is not set
+# CONFIG_DISPLAY is not set
 # end of Application Configuration
 
 #

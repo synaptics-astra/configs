@@ -98,6 +98,8 @@ CONFIG_TOOLS=y
 CONFIG_TOOLS_REL_PATH="bin"
 CONFIG_TOOLS_BIN_PATH="build/tools/bin"
 CONFIG_SECURITY_TOOL_PATH="release/SECURITY/tools"
+# CONFIG_GENX_IMG_PY is not set
+# CONFIG_GENX_IMG_V3_PY is not set
 # end of Host Options
 
 #
@@ -143,6 +145,12 @@ CONFIG_PREBOOT_SECURITY_IMAGE_PATH="boot/security/images"
 #
 # CONFIG_PREBOOT_MEMORY_MULTIPLE is not set
 # CONFIG_PREBOOT_ANDROID_BOOTCTRL is not set
+# CONFIG_PREBOOT_SKIP_FW is not set
+# CONFIG_PREBOOT_FORCE_SPI is not set
+# CONFIG_PMIC_IF_I2C is not set
+# CONFIG_PMIC_IF_PWM is not set
+# CONFIG_PMIC_IF_AUTO is not set
+CONFIG_PMIC_IF_LEGACY=y
 # end of Preboot Configuration
 
 # CONFIG_BOOTLOADER is not set
@@ -288,6 +296,7 @@ CONFIG_DRIVERS_CLK=y
 # CONFIG_POWER is not set
 # CONFIG_SYNA_COMPOSITOR is not set
 # CONFIG_V4L2ISP is not set
+# CONFIG_DISPLAY is not set
 # end of Application Configuration
 
 #

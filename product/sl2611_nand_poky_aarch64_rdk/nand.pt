@@ -5,4 +5,5 @@
 32B     pre-bootloader     1         slc                raw           normal
 16M     cmboot_a           1         slc                raw           normal
 16M     cmboot_b           1         slc                raw           normal
-214M    rootfs_a           1         slc                ubifs         none
+447B    rescue             1         slc                ubifs         none
+164M    rootfs_a           1         slc                ubifs         none
