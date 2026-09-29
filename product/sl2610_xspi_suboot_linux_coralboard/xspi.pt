@@ -1,0 +1,14 @@
+#Size   Name               PlaneNum  Partition_type	FileSystem  write_protection
+64K     bootinfo           1         slc                raw           normal
+256K    preboot_a          1         slc                raw           normal
+256K    sysmgr_a           1         slc                raw           normal
+576K    tzk_a              1         slc                raw           normal
+832K    bl_a               1         slc                raw           normal
+64K     @misc              1         slc                raw           normal
+256K    preboot_b          1         slc                raw           normal
+256K    sysmgr_b           1         slc                raw           normal
+576K    tzk_b              1         slc                raw           normal
+832K    bl_b               1         slc                raw           normal
+64K     @env               1         slc                raw           normal
+14M     boot_a             1         slc                raw           normal
+14M     boot_b             1         slc                raw           normal
